@@ -1,57 +1,16 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+my_sentence = str(input("Please type in a sentence.\n: "))
+my_sentence = my_sentence.upper().split(" ")
+print (my_sentence)
 
-# C extensions
-*.so
+my_word = str(input("Please type in a word you are looking for.\n: "))
+my_word = my_word.upper()
+print(my_word)
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
+positions = []
+for index in range (len(my_sentence)):
+    if my_word == my_sentence[index]:
+        positions.append(index + 1)
+if len(positions) > 0:
+	print("The word",my_word,"Is found in the positions",positions)
+else:
+    print("The word",my_word,"Is not found in the sentence")
